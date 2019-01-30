@@ -5,6 +5,6 @@ import lombok.Data;
 import javax.persistence.Entity;
 
 @Data
-public class PetType {
+public class PetType extends BaseEntity {
     private String name;
 }
