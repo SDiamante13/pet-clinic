@@ -2,9 +2,12 @@ package com.diamante.petclinic.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-
 @Data
 public class PetType extends BaseEntity {
     private String name;
+
+    public PetType(Long id, String name) {
+        super(id);
+        this.name = name;
+    }
 }

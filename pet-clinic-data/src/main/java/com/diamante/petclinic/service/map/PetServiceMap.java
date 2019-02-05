@@ -1,11 +1,13 @@
 package com.diamante.petclinic.service.map;
 
 import com.diamante.petclinic.entity.Pet;
-import com.diamante.petclinic.service.CrudService;
+import com.diamante.petclinic.service.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+@Service
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
     public Pet findById(Long id) {

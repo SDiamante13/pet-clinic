@@ -1,11 +1,13 @@
 package com.diamante.petclinic.service.map;
 
 import com.diamante.petclinic.entity.Owner;
-import com.diamante.petclinic.service.CrudService;
+import com.diamante.petclinic.service.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class OwnerServiceMap  extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+@Service
+public class OwnerServiceMap  extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
     public Owner findById(Long id) {
@@ -30,5 +32,10 @@ public class OwnerServiceMap  extends AbstractMapService<Owner, Long> implements
     @Override
     public void delete(Owner owner) {
         super.delete(owner);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 }
