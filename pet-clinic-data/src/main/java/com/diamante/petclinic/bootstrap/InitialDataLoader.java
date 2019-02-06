@@ -21,13 +21,11 @@ public class InitialDataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         Owner owner1 = Owner.builder()
-                .id(1L)
                 .firstName("Chuck")
                 .lastName("Norris")
                 .build();
 
         Owner owner2 = Owner.builder()
-                .id(2L)
                 .firstName("Paul")
                 .lastName("Jones")
                 .build();
